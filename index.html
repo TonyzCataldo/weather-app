@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <form class="weather-form">
+        <div class="weather-form__container">
+        <p class="weather-form__error">Cidade não encontrada!</p>
+        <input class="weather-form__input" type="text" placeholder="Digite o nome da cidade" required>
+    </div>
+        <button class="weather-form__button" type="submit">Buscar</button>
+    </form>
+    <main class="weather-display">
+        <h1 class="weather-display__city">Praia Grande</h1>
+        <p class="weather-display__temp">30°C</p>
+        <p class="weather-display__content weather-display__content--humidity">70%</p>
+        <p class="weather-display__content weather-display__content--description">Ensolarado</p>
+        <p class="weather-display__content weather-display__content--emoji">☀️</p>
+    </main>
+</body>
+</html> 

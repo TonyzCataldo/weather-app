@@ -1,0 +1,104 @@
+@use 'colors' as *;
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.weather-form{
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+    width: 80%;
+    max-width: 380px;
+    display: flex;
+
+    &__container{
+        width: 70%;
+    }
+
+    &__error{
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        color: $error-text;
+        display: none;
+        
+        &--display{
+            display: block;
+        }
+    }
+
+
+    &__input{
+        height: 2.25rem;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 7px;
+        border: 2px solid $opaque-black;
+        width: 100%;
+        
+
+        &:focus{
+            outline: none;
+            border: 2px solid black;
+        }
+    }
+
+    &__button{
+        height: 2.25rem;
+        border-radius: 5px;
+        border: none;
+        width: 26%;
+        padding: 0;
+        background-color: rgb(50, 155, 50);
+        color: white;
+        margin-left: auto;
+        cursor: pointer;
+        align-self: end;
+
+        &:hover{
+            background-color: rgb(41, 128, 41);
+        }
+    }
+}
+
+.weather-display{
+    border-radius: 15px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1 / 1.5;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 70%;
+    max-width: 368px;
+    max-height: 460px;
+    background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+    
+    &--display{
+        display: flex;
+    }
+
+    &__city{
+        margin-top: 15%;
+        font-size: 2.5rem;
+    }
+
+    &__temp{
+        font-size: 2.5rem;
+    }
+
+    &__content{
+        font-size: 1.5rem;
+
+        &--emoji{
+            font-size: 3rem;
+        }
+    }
+}
